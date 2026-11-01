@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人消费建议工具</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部仪表盘 -->
+        <div class="dashboard">
+            <div class="card">
+                <h3>本月总支出</h3>
+                <p id="monthly-expense">¥0.00</p>
+            </div>
+            <div class="card">
+                <h3>储蓄计划</h3>
+                <p id="saving-plan">暂无目标</p>
+            </div>
+        </div>
+
+        <!-- 账单录入 -->
+        <div class="section">
+            <h2>快速录入账单</h2>
+            <form id="bill-form">
+                <input type="date" id="bill-date" required>
+                <input type="number" id="bill-amount" placeholder="金额" required>
+                <select id="bill-category" required>
+                    <option value="餐饮外卖">餐饮外卖</option>
+                    <option value="交通出行">交通出行</option>
+                    <option value="购物消费">购物消费</option>
+                    <option value="其他">其他</option>
+                </select>
+                <input type="text" id="bill-merchant" placeholder="商户（可选）">
+                <button type="submit">添加账单</button>
+            </form>
+        </div>
+
+        <!-- 储蓄目标 -->
+        <div class="section">
+            <h2>设置储蓄目标</h2>
+            <form id="saving-form">
+                <input type="text" id="saving-name" placeholder="目标名称（如：旅行基金）" required>
+                <input type="number" id="saving-target" placeholder="目标金额" required>
+                <input type="date" id="saving-deadline" required>
+                <button type="submit">创建目标</button>
+            </form>
+        </div>
+
+        <!-- 账单列表 -->
+        <div class="section">
+            <h2>最近账单</h2>
+            <ul id="bill-list"></ul>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

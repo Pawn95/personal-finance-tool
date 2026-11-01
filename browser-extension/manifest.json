@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "账单抓取助手",
+  "version": "1.0",
+  "description": "一键抓取支付宝账单数据",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://consumeprod.alipay.com/record/*",
+        "https://consumeprod.alipay.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab"]
+}
